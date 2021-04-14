@@ -183,3 +183,12 @@ Recursive submodule diff
 git diff -a --submodule=diff origin
 ```
 
+Recursive submodule diff
+========================
+Look at git commit object SHAS
+```bash
+find .git | grep obj | tail -1
+.git/objects/13/2fc0aa1789ce26a97b1bed0a9eefa58b12a96e
+ git cat-file -p 132fc0aa1789ce26a97b1bed0a9eefa58b12a96e
+```
+

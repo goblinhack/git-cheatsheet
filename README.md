@@ -1,14 +1,17 @@
 # git-cheatsheet
-List of useful git commands
+A list of useful git commands
 
-# To add all changes to staging
--   git add .
+To add all changes to staging
+===============================
+```bash
+git add .
+```
 
 # To make a branch
 -   git branch foo
 -   git checkout foo
 
-To make a branch in one step
+# To make a branch in one step
 -   git checkout -b foo
 
 To delete a branch

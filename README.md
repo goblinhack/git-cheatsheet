@@ -102,7 +102,7 @@ This replays all commits onto the master and so avoids messy branch history
 ```bash
 git checkout master
 git pull origin master
-git rebase mfo
+git rebase my-branch
 ```
 
 To change a commit message (pre push)
@@ -135,8 +135,20 @@ git clean -df          # gets rid of untracked files (handy to remove
 
 See just the commits since last clone
 =====================================
+The ‘reflog’ command keeps a track of all changes made in a repository.
 ```bash
 git reflog
+```
+
+To undelete a branch
+========================
+```bash
+git checkout -b test-branch
+git checkout master
+git branch -D test-branch
+git reflog
+# 542359ca (HEAD -> master, origin/master, origin/HEAD) HEAD@{1}: checkout: moving from master to test-branch
+git checkout -b test-branch HEAD@{1}
 ```
 
 See just the last commit

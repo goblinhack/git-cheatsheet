@@ -165,6 +165,25 @@ $ git log --oneline
 $ git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 ```
 
+Get logs after a certain date
+=============================
+```bash
+$ git log --after="apr 1" --oneline --decorate
+$ git log --after="apr 1" --before="yesterday" --oneline --decorate
+```
+
+Get logs for a certain user
+===========================
+```bash
+$ git log --committer="My name" --oneline
+```
+
+Get only n logs
+===============
+```bash
+$ git log -n 3
+```
+
 View just the last commit diffs
 ===============================
 ```bash
@@ -194,5 +213,11 @@ $ git cat-file -p 132fc0aa1789ce26a97b1bed0a9eefa58b12a96e
 Calculate a git hash
 ====================
 ```bash
-echo hello | git hash-object --stdin
+$ echo hello | git hash-object --stdin
+```
+
+Get the common ancestor of two branches
+=======================================
+```bash
+$ git merge-base NPSUITE-2094-test-hang maste
 ```

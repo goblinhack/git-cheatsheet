@@ -133,15 +133,15 @@ git clean -df          # gets rid of untracked files (handy to remove
                        $ an accidental untar/zip in a git repo)
 ```
 
-See just the commits since last clone
-=====================================
+To see all changes since checking out/cloning
+=============================================
 The ‘reflog’ command keeps a track of all changes made in a repository.
 ```bash
 git reflog
 ```
 
 To undelete a branch
-========================
+====================
 ```bash
 git checkout -b test-branch
 git checkout master

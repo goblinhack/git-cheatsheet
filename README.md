@@ -1,10 +1,10 @@
 # git-cheatsheet
 List of useful git commands
 
-To add all changes to staging
+# To add all changes to staging
 -   git add .
 
-To make a branch
+# To make a branch
 -   git branch foo
 -   git checkout foo
 
@@ -27,7 +27,7 @@ To merge a branch into master
 -   git checkout master
 -   git merge my-branch1
 -   git merge my-branch2
--   <resolve conflicts>
+Now resolve conflicts and then:
 -   git add .
 -   git commit
 

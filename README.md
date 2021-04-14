@@ -34,6 +34,7 @@ git branch -av
 
 To add a new commit that undoes the given commit
 ================================================
+(and does not delete history)
 ```bash
 git revert <sha>
 ```

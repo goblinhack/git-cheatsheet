@@ -58,6 +58,12 @@ $ git add .
 $ git commit
 ```
 
+To undo a merge
+===============
+```bash
+$ git reset --merge HEAD~1
+```
+
 Pushing to a remote repo
 ========================
 ```bash
@@ -96,6 +102,20 @@ $ git commit -m "..."
 $ git push origin my-branch1 # you can repeat this add/push
 ```
 Then do a pull request
+
+Should I use git fetch or pull?
+===============================
+
+Git fetch only does a download of the latest changes. They are not
+integrated into your HEAD.
+```bash
+$ git fetch origin
+```
+Git pull on the other hand, downloads and integrate and merges with
+your HEAD.
+```bash
+$ git pull origin master
+```
 
 An alternative to merging is rebase
 ===================================
@@ -221,3 +241,21 @@ Get the common ancestor of two branches
 ```bash
 $ git merge-base NPSUITE-2094-test-hang maste
 ```
+
+Viewing the diff between two commits
+===========================================
+```bash
+$ git log -n 2 --oneline | tail -2
+$ git diff-patch 455f4b22..542359ca
+```
+
+Creating a set of diffs between two commits
+===========================================
+Note, place the older commit first
+```bash
+$ git log -n 2 --oneline | tail -2
+$ git format-patch 455f4b22..542359ca -o diffs
+diffs/0001-add-goblin.patch
+diffs/0002-notes.patch
+```
+

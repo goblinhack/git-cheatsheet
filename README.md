@@ -29,7 +29,7 @@ git branch -D my-branch
 To list all branches
 ====================
 ```bash
-git branch -a
+git branch -av
 ```
 
 To add a new commit that undoes the given commit
@@ -88,8 +88,8 @@ To push a branch to the remote
 git checkout master
 git pull origin master
 git checkout -b my-branch1
-do stuff
 ```
+Now add some files and stuff
 ```bash
 git commit -m "..."
 git push origin my-branch1 # you can repeat this add/push
@@ -138,3 +138,35 @@ See just the commits since last clone
 ```bash
 git reflog
 ```
+
+See just the last commit
+========================
+```bash
+git log -1 HEAD
+```
+
+A variety of single line output git logs
+========================================
+```bash
+git log --oneline
+git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+```
+
+View just the last commit diffs
+===============================
+```bash
+git log -n1 -p --format=fuller
+```
+
+View all commits diffs
+======================
+```bash
+git log -p --format=fuller
+```
+
+Recursive submodule diff
+========================
+```bash
+git diff -a --submodule=diff origin
+```
+

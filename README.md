@@ -239,7 +239,7 @@ $ echo hello | git hash-object --stdin
 Get the common ancestor of two branches
 =======================================
 ```bash
-$ git merge-base NPSUITE-2094-test-hang maste
+$ git merge-base some-branch master
 ```
 
 Viewing the diff between two commits

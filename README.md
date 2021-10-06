@@ -7,6 +7,12 @@ To add all changes to staging
 $ git add .
 ```
 
+To get rid of untracked files
+=============================
+```bash
+$ git clean -f -d
+```
+
 To make a branch
 ================
 ```bash
